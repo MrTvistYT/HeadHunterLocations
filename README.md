@@ -5,7 +5,7 @@
 # Как использовать:
 
 ```
-  <repositories>
+	<repositories>
 		<repository>
 		    <id>jitpack.io</id>
 		    <url>https://jitpack.io</url>
