@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HeadHunterLocations:jar">
+    <output-path>$PROJECT_DIR$/../../Green-Tavern/locations/plugins</output-path>
+    <root id="archive" name="HeadHunterLocations.jar">
+      <element id="module-output" name="HeadHunterLocations" />
+    </root>
+  </artifact>
+</component>

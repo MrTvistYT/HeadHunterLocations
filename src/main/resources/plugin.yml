@@ -1,0 +1,24 @@
+name: HeadHunterLocations
+version: '${project.version}'
+main: org.gt.headhunterlocations.HeadHunterLocations
+api-version: '1.20'
+
+
+depend: [Citizens, PlaceholderAPI, ItemsAdder]
+commands:
+  spawnHunter:
+    description: spawns NPC
+  spawnBoard:
+    description: spawnsBoard
+  karma:
+    description: gets Karma
+  headHunter:
+    description: headHunter
+  headBag:
+    description: opens HeadBag
+
+
+
+permissions:
+  hh.headhunterlicense:
+    description: license for velocity

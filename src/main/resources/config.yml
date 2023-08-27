@@ -1,0 +1,21 @@
+mySQL:
+  url: "jdbc:mysql://127.0.0.1/GT?user=root&password=&serverTimezone=UTC"
+  username: "root"
+  password: ""
+
+
+
+default-karma: 0
+# количество кармы у игрока, который первый раз зашёл
+
+add-karma:
+  # при убийстве игрока забирает 5 кармы
+  kill-player: -5
+
+add-board-karma: -100
+# добавляет игрока на доску, если у него больше -100 кармы
+
+formula: " -1 * %karma% * 10 "
+
+item: "green_tavern:platinum_sheet"
+item-amount: 3
