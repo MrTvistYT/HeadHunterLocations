@@ -25,8 +25,11 @@
 
 ```HeadHunterLocations.getKarma(<ник игрока>);```  - получить карму.
 
+
 ```HeadHunterLocations.settKarma(<ник игрока>, количество);``` - установить карму.
 
+
 ```HeadHunterLocations.addKarma(<ник игрока>, количество);``` - добавить карму.
+
 
 ```HeadHunterLocations.isTasked(<ник игрока>);``` - узнать есть ли задание на игрока.
