@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="HeadHunterLocations" target="9" />
+      <module name="HeadHunterLocations" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

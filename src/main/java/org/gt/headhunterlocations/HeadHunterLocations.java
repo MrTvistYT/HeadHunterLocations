@@ -26,6 +26,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
+import java.util.List;
 
 public final class HeadHunterLocations extends JavaPlugin implements PluginMessageListener {
 
@@ -197,13 +198,17 @@ public final class HeadHunterLocations extends JavaPlugin implements PluginMessa
 
     private void messageReader() {
         Bukkit.getScheduler().runTaskTimer(this, reader -> {
-            String cmd = main.getSQLgetter().getCommands();
-            String[] args = cmd.split(" ");
+            List<String> cmd = main.getSQLgetter().getCommands();
 
-            if (cmd.contains("update")) {
-                updateTasks(args[1]);
-                main.getSQLgetter().removeCommands();
-            }
+            cmd.forEach(command -> {
+                String[] args = command.split(" ");
+
+                if (cmd.contains("update")) {
+                    updateTasks(args[1]);
+                    main.getSQLgetter().removeCommand(command);
+                }
+            });
+
         }, 5, 5);
     }
 

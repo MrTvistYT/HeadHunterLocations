@@ -395,8 +395,8 @@ public class SQLgetter {
         return new ArrayList<>();
     }
 
-    public String getCommands(){
-        String cmds = "";
+    public List<String> getCommands(){
+        List<String> commands = new ArrayList<>();
         try {
             PreparedStatement ps = manager.getConnection().prepareStatement("SELECT * FROM headHunterExecutor WHERE server = ?");
             ps.setInt(1, 1);
@@ -404,17 +404,18 @@ public class SQLgetter {
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                return rs.getString(1);
+                commands.add(rs.getString(1));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return cmds;
+        return commands;
     }
-    public void removeCommands(){
+    public void removeCommand(String string){
         try {
-            PreparedStatement ps = manager.getConnection().prepareStatement("DELETE FROM headHunterExecutor WHERE server = ?");
+            PreparedStatement ps = manager.getConnection().prepareStatement("DELETE FROM headHunterExecutor WHERE server = ? AND command = ?");
             ps.setInt(1, 1);
+            ps.setString(2, string);
 
             ps.executeUpdate();
 
